@@ -23,7 +23,7 @@ int main() {
     while(strcasecmp(cmd, "exit") && strcasecmp(cmd, "quit")) {
         printf(" > ");
 
-        char *tempcmd = malloc(sizeof(tempcmd));
+        char *tempcmd = malloc(MAIN_CMD_MAX_SIZE);
         if(tempcmd == NULL) return nomemory();
 
         fgets(tempcmd, MAIN_CMD_MAX_SIZE, stdin);

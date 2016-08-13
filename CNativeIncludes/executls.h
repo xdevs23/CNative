@@ -8,9 +8,13 @@
 #include <sys/types.h> /* for pid_t */
 #include <sys/wait.h> /* for wait */
 
+#ifndef MAIN_CMD_MAX_SIZE
+#define MAIN_CMD_MAX_SIZE 2048
+#endif
+
 static int executls_execute_program(char *progpath, char *args) {
-    char *fullquery = malloc(sizeof(progpath) + sizeof(args) + /* space: */ 1);
-    memcpy(fullquery, progpath, sizeof(progpath));
+    char *fullquery = malloc(MAIN_CMD_MAX_SIZE * 2);
+    memcpy(fullquery, progpath, strlen(progpath));
     strcat(fullquery, " ");
     strcat(fullquery, args);
 

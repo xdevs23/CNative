@@ -35,8 +35,9 @@ int cli_char_hash(unsigned char *str) {
  * @param cmd: The commands
  */
 static void cli_handle_command(char *cmd) {
+
     // First make it lower case
-    char *newcmd = malloc(sizeof(cmd));
+    char *newcmd = malloc(MAIN_CMD_MAX_SIZE);
     strcpy(newcmd, string_tolower(cmd));
 
     // Now handle the command
