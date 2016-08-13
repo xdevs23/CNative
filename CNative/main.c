@@ -22,12 +22,20 @@ int main() {
     // Loop if not exit or quit
     while(strcasecmp(cmd, "exit") && strcasecmp(cmd, "quit")) {
         printf(" > ");
+
         char *tempcmd = malloc(sizeof(tempcmd));
-        if(tempcmd == NULL) goto nomemory
-        scanf("%s", tempcmd);
+        if(tempcmd == NULL) goto nomemory;
+
+        fgets(tempcmd, MAIN_CMD_MAX_SIZE, stdin);
+
+        // Remove trailing newline, if there.
+        if ((strlen(tempcmd) > 0) && (tempcmd[strlen(tempcmd) - 1] == '\n'))
+            tempcmd[strlen(tempcmd) - 1] = '\0';
+
         strcpy(cmd, tempcmd);
         cli_handle_command(cmd);
     }
+
     return 0;
 
 nomemory:
