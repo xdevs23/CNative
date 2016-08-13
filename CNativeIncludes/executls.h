@@ -9,8 +9,8 @@
 #include <sys/wait.h> /* for wait */
 
 static int executls_execute_program(char *progpath, char *args) {
-    char *fullquery = malloc(sizeof(fullquery));
-    strcpy(fullquery, progpath);
+    char *fullquery = malloc(sizeof(fullquery) + sizeof(args) + /* space: */ 8);
+    memcpy(fullquery, progpath, sizeof(progpath));
     strcat(fullquery, " ");
     strcat(fullquery, args);
 
