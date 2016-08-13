@@ -6,6 +6,7 @@
 #include <string.h>
 #include "cmd_ver.h"
 #include "debug.h"
+#include "strutls.h"
 
 int cli_char_hash(unsigned char *str) {
     long hash = 21;
@@ -30,9 +31,7 @@ int cli_char_hash(unsigned char *str) {
 static void cli_handle_command(char *cmd) {
     // First make it lower case
     char *newcmd = malloc(sizeof(cmd));
-    strcpy(newcmd, cmd);
-    for (int i = 0; cmd[i]; i++)
-        newcmd[i] = tolower(cmd[i]);
+    strcpy(newcmd, string_tolower(cmd));
 
     // Now handle the command
     switch(cli_char_hash(newcmd)) {
@@ -41,9 +40,7 @@ static void cli_handle_command(char *cmd) {
             char *encmd = malloc(sizeof(encmd));
             scanf("%s", encmd);
             printf("Generating hash for command %s", encmd);
-            for(int i = 0; encmd[i]; i++){
-              encmd[i] = tolower(encmd[i]);
-            }
+            strcpy(encmd, string_tolower(encmd));
             printf("\n%d\n", cli_char_hash(encmd));
             break;
         case CLI_CMD_VER:
