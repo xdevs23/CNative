@@ -8,6 +8,11 @@
 #include "debug.h"
 #include "strutls.h"
 #include "executls.h"
+#include "prntutls.h"
+
+#ifndef MAIN_CMD_MAX_SIZE
+#define MAIN_CMD_MAX_SIZE 2048
+#endif
 
 int cli_char_hash(unsigned char *str) {
     long hash = 21;
@@ -38,8 +43,9 @@ static void cli_handle_command(char *cmd) {
     switch(cli_char_hash(newcmd)) {
         case CLI_CMD_GHASHFCMD:
             printf("Enter command: ");
-            char *encmd = malloc(sizeof(encmd));
-            scanf("%s", encmd);
+            char *encmd = malloc(MAIN_CMD_MAX_SIZE);
+            fgets(encmd, MAIN_CMD_MAX_SIZE, stdin);
+            strcpy(encmd, string_checkinput_newline(encmd));
             printf("Generating hash for command %s", encmd);
             strcpy(encmd, string_tolower(encmd));
             printf("\n%d\n", cli_char_hash(encmd));
