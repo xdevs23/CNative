@@ -28,7 +28,14 @@ int cli_char_hash(unsigned char *str) {
  * @param cmd: The commands
  */
 static void cli_handle_command(char *cmd) {
-    switch(cli_char_hash(cmd)) {
+    // First make it lower case
+    char *newcmd = malloc(sizeof(cmd));
+    strcpy(newcmd, cmd);
+    for (int i = 0; cmd[i]; i++)
+        newcmd[i] = tolower(cmd[i]);
+
+    // Now handle the command
+    switch(cli_char_hash(newcmd)) {
         case CLI_CMD_GHASHFCMD:
             printf("Enter command: ");
             char *encmd = malloc(sizeof(encmd));
