@@ -13,7 +13,7 @@ int main() {
 
     char *cmd = malloc(sizeof(cmd)); // Allocate memory for cmd, avoid segfault
     // Loop if not exit or quit
-    while(strcmp(cmd, "exit") && strcmp(cmd, "quit")) {
+    while(strcasecmp(cmd, "exit") && strcasecmp(cmd, "quit")) {
         printf(" > ");
         char *tempcmd = malloc(sizeof(tempcmd));
         scanf("%s", tempcmd);
