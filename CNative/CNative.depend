@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1471085339 source:/media/simao/PP/Projects/CNative/CNative/main.c
+	<stdio.h>
+	<stdlib.h>
+	"welcmsg.h"
+
+1471083753 /media/simao/PP/Projects/CNative/CNative/welcmsg.h
+	"welcome.h"
+
+1471083769 /media/simao/PP/Projects/CNative/CNativeIncludes/welcome.h
+	"debug.h"
+
+1471085133 /media/simao/PP/Projects/CNative/CNativeIncludes/debug.h
+
