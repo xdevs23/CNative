@@ -14,6 +14,7 @@ static char* string_tolower(char *str) {
 static char* string_checkinput_newline(char *input) {
     if ((strlen(input) > 0) && (input[strlen(input) - 1] == '\n'))
         input[strlen(input) - 1] = '\0';
+    return input;
 }
 
 #endif // _STRUTLS_H_
