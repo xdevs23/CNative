@@ -7,6 +7,9 @@ static int DEBUG = 1;
 #else
 static int DEBUG = 0;
 #endif //   __DEBUG_ENABLE
+
+#else
+static int DEBUG = 1;
 #endif // ! __DEBUG_FORCE_ENABLE
 
 /**
