@@ -1,4 +1,4 @@
-### CNative
+# CNative
 
 **A command line application written in pure C**
 
