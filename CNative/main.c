@@ -31,14 +31,16 @@ int main() {
         fgets(tempcmd, MAIN_CMD_MAX_SIZE, stdin);
 
         // Remove trailing newline, if there.
-        strncpy(tempcmd, string_checkinput_newline(tempcmd), strlen(tempcmd));
+        strncpy(tempcmd, string_checkinput_newline(tempcmd), strlen(cmd));
 
         if(string_checksize(tempcmd, MAIN_CMD_MAX_SIZE)) {
             cnative_err_input_too_big();
             continue;
         }
+
         strncpy(cmd, tempcmd, strlen(tempcmd));
         cli_handle_command(cmd);
+        //memset(cmd, 0, MAIN_CMD_MAX_SIZE);
     }
 
     return 0;

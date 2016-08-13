@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1471110701 source:/media/simao/PP/Projects/CNative/CNative/main.c
+1471112802 source:/media/simao/PP/Projects/CNative/CNative/main.c
 	<stdio.h>
 	<stdlib.h>
 	"welcmsg.h"
 	"prntutls.h"
 	"cli/cli.h"
+	"strutls.h"
+	"errs.h"
 
 1471109314 /media/simao/PP/Projects/CNative/CNative/welcmsg.h
 	"welcome.h"
@@ -12,11 +14,12 @@
 1471098657 /media/simao/PP/Projects/CNative/CNativeIncludes/welcome.h
 	"debug.h"
 
-1471085133 /media/simao/PP/Projects/CNative/CNativeIncludes/debug.h
+1471110776 /media/simao/PP/Projects/CNative/CNativeIncludes/debug.h
 
-1471107925 /media/simao/PP/Projects/CNative/CNativeIncludes/prntutls.h
+1471112097 /media/simao/PP/Projects/CNative/CNativeIncludes/prntutls.h
+	"errs.h"
 
-1471110720 /media/simao/PP/Projects/CNative/CNative/cli/cli.h
+1471113161 /media/simao/PP/Projects/CNative/CNative/cli/cli.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -25,6 +28,7 @@
 	"strutls.h"
 	"executls.h"
 	"prntutls.h"
+	"errs.h"
 
 1471100456 /media/simao/PP/Projects/CNative/CNativeBuiltin/cmd_ver.h
 	"prntutls.h"
@@ -32,12 +36,13 @@
 
 1471100415 /media/simao/PP/Projects/CNative/CNative/appconfig.h
 
-1471108707 /media/simao/PP/Projects/CNative/CNativeIncludes/strutls.h
+1471113116 /media/simao/PP/Projects/CNative/CNativeIncludes/strutls.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"errs.h"
 
-1471106944 /media/simao/PP/Projects/CNative/CNativeIncludes/executls.h
+1471111424 /media/simao/PP/Projects/CNative/CNativeIncludes/executls.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -64,4 +69,6 @@
 	<unistd.h>
 	<sys/types.h>
 	<sys/wait.h>
+
+1471112536 /media/simao/PP/Projects/CNative/CNativeIncludes/errs.h
 

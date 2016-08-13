@@ -9,6 +9,7 @@
 #include "strutls.h"
 #include "executls.h"
 #include "prntutls.h"
+#include "errs.h"
 
 #ifndef MAIN_CMD_MAX_SIZE
 #define MAIN_CMD_MAX_SIZE 2048
@@ -38,7 +39,12 @@ static void cli_handle_command(char *cmd) {
 
     // First make it lower case
     char *newcmd = malloc(MAIN_CMD_MAX_SIZE);
-    strcpy(newcmd, string_tolower(cmd));
+
+    if(string_checkmaxsz(cmd)) {
+        cnative_err_input_too_big();
+        return;
+    }
+    strncpy(newcmd, string_tolower(cmd), strlen(cmd));
 
     // Now handle the command
     switch(cli_char_hash(newcmd)) {
@@ -46,9 +52,18 @@ static void cli_handle_command(char *cmd) {
             printf("Enter command: ");
             char *encmd = malloc(MAIN_CMD_MAX_SIZE);
             fgets(encmd, MAIN_CMD_MAX_SIZE, stdin);
+
+            if(string_checkmaxsz(encmd)) {
+                cnative_err_input_too_big();
+                break;
+            }
+
             printf("Generating hash for command %s", encmd);
-            strcpy(encmd,
-                string_tolower(string_checkinput_newline(encmd)));
+            strncpy(
+                encmd,
+                string_tolower(string_checkinput_newline(encmd)),
+                strlen(encmd)
+            );
             printf("\nGenerated hash: %d\n", cli_char_hash(encmd));
             break;
         case CLI_CMD_VER:

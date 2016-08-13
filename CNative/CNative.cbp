@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-D__DEBUG_ENABLE" />
+					<Add directory="../CNativeIncludes" />
+					<Add directory="../CNativeBuiltin" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="../CNativeIncludes/" />
+					<Add directory="../CNativeBuiltin" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,9 +36,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="appconfig.h" />
+		<Unit filename="cli/cli.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="welcmsg.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

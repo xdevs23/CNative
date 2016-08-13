@@ -31,9 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="welcome.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="debug.h" />
+		<Unit filename="errs.h" />
+		<Unit filename="executls.h" />
+		<Unit filename="prntutls.h" />
+		<Unit filename="strutls.h" />
+		<Unit filename="welcome.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
