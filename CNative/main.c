@@ -10,6 +10,7 @@
  */
 int main() {
     cnative_print_welcome_message();
+
     char *cmd = malloc(sizeof(cmd)); // Allocate memory for cmd, avoid segfault
     // Loop if not exit or quit
     while(strcmp(cmd, "exit") && strcmp(cmd, "quit")) {

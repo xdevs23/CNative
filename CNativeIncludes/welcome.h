@@ -7,10 +7,7 @@
  * Print a welcome message
  */
 static void print_welcome(char *output) {
-
-    debugf("Printing welcome");
     printf("%s\n", output);
-
 }
 
 #endif // _WELCOME_H_

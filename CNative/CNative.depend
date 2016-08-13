@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1471098368 source:/media/simao/PP/Projects/CNative/CNative/main.c
+1471098632 source:/media/simao/PP/Projects/CNative/CNative/main.c
 	<stdio.h>
 	<stdlib.h>
 	"welcmsg.h"
