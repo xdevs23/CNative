@@ -4,6 +4,7 @@
 #include "welcmsg.h"    // Welcome message header
 #include "prntutls.h"   // Print utils
 #include "cli/cli.h"    // Command Line Interpreter
+#include "errs.h"       // Error messages
 
 #define MAIN_CMD_MAX_SIZE 2048
 
