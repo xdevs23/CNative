@@ -4,6 +4,7 @@
 #include "welcmsg.h"    // Welcome message header
 #include "prntutls.h"   // Print utils
 #include "cli/cli.h"    // Command Line Interpreter
+#include "strutls.h"    // String utils
 #include "errs.h"       // Error messages
 
 #define MAIN_CMD_MAX_SIZE 2048
@@ -30,9 +31,13 @@ int main() {
         fgets(tempcmd, MAIN_CMD_MAX_SIZE, stdin);
 
         // Remove trailing newline, if there.
-        strcpy(tempcmd, string_checkinput_newline(tempcmd));
+        strncpy(tempcmd, string_checkinput_newline(tempcmd), strlen(tempcmd));
 
-        strcpy(cmd, tempcmd);
+        if(string_checksize(tempcmd, MAIN_CMD_MAX_SIZE)) {
+            cnative_err_input_too_big();
+            continue;
+        }
+        strncpy(cmd, tempcmd, strlen(tempcmd));
         cli_handle_command(cmd);
     }
 
