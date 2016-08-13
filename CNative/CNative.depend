@@ -16,13 +16,14 @@
 
 1471097587 /media/simao/PP/Projects/CNative/CNativeIncludes/prntutls.h
 
-1471105187 /media/simao/PP/Projects/CNative/CNative/cli/cli.h
+1471106092 /media/simao/PP/Projects/CNative/CNative/cli/cli.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"cmd_ver.h"
 	"debug.h"
 	"strutls.h"
+	"executls.h"
 
 1471100456 /media/simao/PP/Projects/CNative/CNativeBuiltin/cmd_ver.h
 	"prntutls.h"
@@ -34,4 +35,12 @@
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1471106861 /media/simao/PP/Projects/CNative/CNativeIncludes/executls.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
 

@@ -7,6 +7,7 @@
 #include "cmd_ver.h"
 #include "debug.h"
 #include "strutls.h"
+#include "executls.h"
 
 int cli_char_hash(unsigned char *str) {
     long hash = 21;
@@ -46,7 +47,10 @@ static void cli_handle_command(char *cmd) {
         case CLI_CMD_VER:
             builtin_cmd_ver_oncommand();
             break;
-        default: break;
+        default:
+            if(executls_execute_program(newcmd, ""))
+                printf("%s: not found\n", newcmd);
+            break;
     }
 }
 
