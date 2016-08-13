@@ -45,10 +45,10 @@ static void cli_handle_command(char *cmd) {
             printf("Enter command: ");
             char *encmd = malloc(MAIN_CMD_MAX_SIZE);
             fgets(encmd, MAIN_CMD_MAX_SIZE, stdin);
-            strcpy(encmd, string_checkinput_newline(encmd));
             printf("Generating hash for command %s", encmd);
-            strcpy(encmd, string_tolower(encmd));
-            printf("\n%d\n", cli_char_hash(encmd));
+            strcpy(encmd,
+                string_tolower(string_checkinput_newline(encmd)));
+            printf("\nGenerated hash: %d\n", cli_char_hash(encmd));
             break;
         case CLI_CMD_VER:
             builtin_cmd_ver_oncommand();
