@@ -29,8 +29,7 @@ int main() {
         fgets(tempcmd, MAIN_CMD_MAX_SIZE, stdin);
 
         // Remove trailing newline, if there.
-        if ((strlen(tempcmd) > 0) && (tempcmd[strlen(tempcmd) - 1] == '\n'))
-            tempcmd[strlen(tempcmd) - 1] = '\0';
+        strcpy(tempcmd, string_checkinput_newline(tempcmd));
 
         strcpy(cmd, tempcmd);
         cli_handle_command(cmd);
