@@ -17,14 +17,14 @@ int main() {
     char *cmd = malloc(MAIN_CMD_MAX_SIZE);
 
     // Check for memory
-    if(cmd == NULL) goto nomemory;
+    if(cmd == NULL) return nomemory();
 
     // Loop if not exit or quit
     while(strcasecmp(cmd, "exit") && strcasecmp(cmd, "quit")) {
         printf(" > ");
 
         char *tempcmd = malloc(sizeof(tempcmd));
-        if(tempcmd == NULL) goto nomemory;
+        if(tempcmd == NULL) return nomemory();
 
         fgets(tempcmd, MAIN_CMD_MAX_SIZE, stdin);
 
@@ -37,8 +37,4 @@ int main() {
     }
 
     return 0;
-
-nomemory:
-    printn("Error: Memory not allocatable or no free memory available");
-    return 1;
 }
