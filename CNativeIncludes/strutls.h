@@ -30,10 +30,10 @@ static char* string_checkinput_newline(char *input) {
 }
 
 /**
- * Check if the size of @param src is bigger than size of @param cmp
+ * Check if the size of @param src is bigger than @param cmp
  */
-static int string_checksize(char *src, char *cmp) {
-    return strlen(src) > strlen(cmp);
+static int string_checksize(char *src, long cmp) {
+    return strlen(src) >= cmp;
 }
 
 /**
