@@ -43,4 +43,25 @@ static int string_checkmaxsz(char *src) {
     return strlen(src) >= MAIN_CMD_MAX_SIZE;
 }
 
+/**
+ * Split a string
+ */
+static char** string_split(char* src, char split) {
+    // Count how many times we want to split
+    int splitchar_count = 1;
+    for ( int i = 0; i < strlen(src); i++ )
+        if(src[i] == split) splitchar_count++;
+
+    // Now start splitting
+    char* splitresult[splitchar_count];
+
+    splitchar_count = 0;
+    for ( int i = 0; i < strlen(src); i++ ) {
+        if(src[i] == split) splitchar_count++;
+        strncat(splitresult[splitchar_count], src[i], 1);
+    }
+
+    return splitresult;
+}
+
 #endif // _STRUTLS_H_
