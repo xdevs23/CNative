@@ -15,6 +15,9 @@
 #define MAIN_CMD_MAX_SIZE 2048
 #endif
 
+/**
+ * Hash a command or any string to a number
+ */
 int cli_char_hash(unsigned char *str) {
     long hash = 21;
     int c = 0;

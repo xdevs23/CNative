@@ -4,6 +4,9 @@
 #include "prntutls.h"
 #include "../CNative/appconfig.h"
 
+/**
+ * Command ver, prints current version of CNative
+ */
 static void builtin_cmd_ver_oncommand() {
     printf("CNative %d.%d.%d\n",
         cnative_version.major,

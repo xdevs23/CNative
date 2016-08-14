@@ -12,6 +12,9 @@
 #define MAIN_CMD_MAX_SIZE 2048
 #endif
 
+/**
+ * Execute a program
+ */
 static int executls_execute_program(char *progpath, char *args) {
     char *fullquery = malloc(MAIN_CMD_MAX_SIZE * 2);
     memcpy(fullquery, progpath, strlen(progpath));
