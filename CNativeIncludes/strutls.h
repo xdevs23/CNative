@@ -30,14 +30,14 @@ static char* string_checkinput_newline(char *input) {
 }
 
 /**
- * Check if the size of @param src is bigger or equal to @param cmp
+ * Check if the size of @param src is bigger than size of @param cmp
  */
 static int string_checksize(char *src, char *cmp) {
-    return strlen(src) >= cmp;
+    return strlen(src) > strlen(cmp);
 }
 
 /**
- * Check if the size of @param src is bigger or equal to MAIN_CMD_MAX_SIZE
+ * Check if the size of @param src is bigger than MAIN_CMD_MAX_SIZE
  */
 static int string_checkmaxsz(char *src) {
     return strlen(src) >= MAIN_CMD_MAX_SIZE;
