@@ -11,5 +11,4 @@ static void builtin_cmd_ver_oncommand() {
         cnative_version.rev);
 }
 
-
 #endif /* _CMD_VER_H_ */

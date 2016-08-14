@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1471112802 source:/media/simao/PP/Projects/CNative/CNative/main.c
+1471114109 source:/media/simao/PP/Projects/CNative/CNative/main.c
 	<stdio.h>
 	<stdlib.h>
 	"welcmsg.h"
@@ -30,11 +30,11 @@
 	"prntutls.h"
 	"errs.h"
 
-1471100456 /media/simao/PP/Projects/CNative/CNativeBuiltin/cmd_ver.h
+1471170954 /media/simao/PP/Projects/CNative/CNativeBuiltin/cmd_ver.h
 	"prntutls.h"
 	"../CNative/appconfig.h"
 
-1471100415 /media/simao/PP/Projects/CNative/CNative/appconfig.h
+1471170999 /media/simao/PP/Projects/CNative/CNative/appconfig.h
 
 1471113116 /media/simao/PP/Projects/CNative/CNativeIncludes/strutls.h
 	<stdio.h>
