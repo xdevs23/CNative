@@ -41,7 +41,6 @@ int main() {
 
         strncpy(cmd, tempcmd, strlen(tempcmd) + 1);
         cli_handle_command(cmd);
-        //memset(cmd, 0, MAIN_CMD_MAX_SIZE);
     }
 
     return 0;
