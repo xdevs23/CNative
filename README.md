@@ -4,6 +4,8 @@
 
 Note: this project is just a free-time project and not supposed to be used productively, yet.
 
+This project may or may not be continued. Any help is appreciated anyways, so that I can improve my C experience.
+
 
 ## License
 
